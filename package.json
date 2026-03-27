@@ -1,7 +1,7 @@
 {
   "name": "homebridge-mi",
   "displayName": "Homebridge Mi Devices",
-  "version": "1.8.10",
+  "version": "1.8.11",
   "description": "Homebridge plugin for devices supporting the miot protocol",
   "main": "index.js",
   "engines": {
@@ -60,12 +60,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/claudiomadureira/homebridge-mi.git"
+    "url": "https://github.com/claudiomadureira/homebridge-mi-devices.git"
   },
   "bugs": {
-    "url": "https://github.com/claudiomadureira/homebridge-mi/issues"
+    "url": "https://github.com/claudiomadureira/homebridge-mi-devices/issues"
   },
-  "homepage": "https://github.com/claudiomadureira/homebridge-mi#readme",
+  "homepage": "https://github.com/claudiomadureira/homebridge-mi-devices#readme",
   "bin": {
     "miot": "./cli/index.js"
   }
