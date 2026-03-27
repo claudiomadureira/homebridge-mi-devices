@@ -1,16 +1,16 @@
 <span align="center">
 
-# homebridge-miot
+# homebridge-mi-devices
 
 [![verified-by-homebridge](https://badgen.net/badge/homebridge/verified/purple)](https://github.com/homebridge/homebridge/wiki/Verified-Plugins)
-[![homebridge-miot](https://badgen.net/npm/v/homebridge-miot?icon=npm)](https://www.npmjs.com/package/homebridge-miot)
-[![mit-license](https://badgen.net/npm/license/lodash)](https://github.com/merdok/homebridge-miot/blob/master/LICENSE)
-[![follow-me-on-twitter](https://badgen.net/badge/icon/twitter?icon=twitter&label=merdok_dev)](https://twitter.com/merdok_dev)
-[![join-discord](https://badgen.net/badge/icon/discord?icon=discord&label=homebridge-miot)](https://discord.gg/c9AWNESQMg)
+[![homebridge-mi-devices](https://badgen.net/npm/v/homebridge-mi-devices?icon=npm)](https://www.npmjs.com/package/homebridge-mi-devices)
+[![mit-license](https://badgen.net/npm/license/lodash)](https://github.com/claudiomadureira/homebridge-mi-devices/blob/master/LICENSE)
+[![follow-me-on-twitter](https://badgen.net/badge/icon/twitter?icon=twitter&label=claudiomadureira_dev)](https://twitter.com/claudiomadureira_dev)
+[![join-discord](https://badgen.net/badge/icon/discord?icon=discord&label=homebridge-mi-devices)](https://discord.gg/c9AWNESQMg)
 
 </span>
 
-`homebridge-miot` is a plugin for homebridge which allows you to control any device supporting the miot protocol from Xiaomi!  
+`homebridge-mi-devices` is a plugin for homebridge which allows you to control any device supporting the miot protocol from Xiaomi!  
 The goal is to add Homekit support to miot devices and make them fully controllable from the native Homekit iOS app and Siri.
 
 #### Feedback and contribution is helpful and will improve the plugin!
@@ -33,7 +33,7 @@ The goal is to add Homekit support to miot devices and make them fully controlla
 * Outlet
 * Curtain
 * Fresh Air System
-* Robot Cleaner - [Room Cleaning guide](https://github.com/merdok/homebridge-miot/blob/main/docs/robotcleaner.md)
+* Robot Cleaner - [Room Cleaning guide](https://github.com/claudiomadureira/homebridge-mi-devices/blob/main/docs/robotcleaner.md)
 * Light
 * Airer
 * Oven
@@ -59,7 +59,7 @@ The goal is to add Homekit support to miot devices and make them fully controlla
 
 More device types will be added!
 
-For a full list of supported devices by model check here: [all supported devices by model](https://github.com/merdok/homebridge-miot/blob/master/supported_devices.md).
+For a full list of supported devices by model check here: [all supported devices by model](https://github.com/claudiomadureira/homebridge-mi-devices/blob/master/supported_devices.md).
 
 #### Even if your device is not on the supported devices list, worry not! The plugin will use the miot spec to categorize your device as best as possible.
 
@@ -73,9 +73,9 @@ Install homebridge:
 sudo npm install -g homebridge
 ```
 
-Install homebridge-miot:
+Install homebridge-mi-devices:
 ```sh
-sudo npm install -g homebridge-miot
+sudo npm install -g homebridge-mi-devices
 ```
 
 ## Configuration
@@ -181,7 +181,7 @@ For the plugin to work the device token is required. The plugin offers you two w
 - Another way it to use the command line tools, simply type `miot cloud-devices -u <username> -p <password>` in the command line to get the tokens for all your devices!
 
 Other ways:  
-- guide to retrieve token manually: [obtaining mi device token](https://github.com/merdok/homebridge-miot/blob/master/obtain_token.md).  
+- guide to retrieve token manually: [obtaining mi device token](https://github.com/claudiomadureira/homebridge-mi-devices/blob/master/obtain_token.md).  
 - a great tool to easily retrieve the token: [Xiaomi Cloud Tokens Extractor](https://github.com/PiotrMachowski/Xiaomi-cloud-tokens-extractor).
 
 ### Configuration
@@ -282,11 +282,11 @@ Allows to monitor any properties of your device. **Default: "" (not specified)**
     - *linkedProperty* - [optional] linked property used for status checking- Useful when monitor should only be possible when for example the device is on
     - *linkedPropertyValue* - [optional] the value of the linked property
 
-#### Some device types also have some specific configuration fields. Please have a look at the device type page to check whether there are any available under the [docs](https://github.com/merdok/homebridge-miot/tree/main/docs).
+#### Some device types also have some specific configuration fields. Please have a look at the device type page to check whether there are any available under the [docs](https://github.com/claudiomadureira/homebridge-mi-devices/tree/main/docs).
 
 #### Property and Action names (or ids)
 There are 4 ways to get the property an action names (or ids) used in ***actionButtons***, ***propertyControl*** and ***propertyMonitor***:
-- Use the [Miot Spec Fetcher](https://merdok.github.io/miotspec/)
+- Use the [Miot Spec Fetcher](https://claudiomadureira.github.io/miotspec/)
 - Use the plugin's settings in homebridge-config-ui-x (Homebridge Ui), where you will find a **"Fetch Device Metadata"** button
 - Check the homebridge log. Available device property and action names will be printed there during initialization
 - You can also use the official miot spec in order to determine the names or ids [Miot Spec - Released](https://miot-spec.org/miot-spec-v2/instances?status=released)
@@ -355,7 +355,7 @@ miot cloud set-props '[{"siid":2,"piid":2,"value":1,"did":"<DID>"}]'
 
 ## Mapping Device Functions to HomeKit
 
-The `homebridge-miot` plugin uses various HomeKit elements to enable the control of MIoT devices. Since HomeKit does not natively support all device types, certain functionalities are mapped as follows:
+The `homebridge-mi-devices` plugin uses various HomeKit elements to enable the control of MIoT devices. Since HomeKit does not natively support all device types, certain functionalities are mapped as follows:
 
 - **Time Control:** For devices like air fryers, the cooking time is represented as a dimmable light switch. The "brightness" level corresponds to the duration in minutes. For example, setting the light to 50% brightness would represent 50 minutes of cooking time.
 

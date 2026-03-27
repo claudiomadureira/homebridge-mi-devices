@@ -1,10 +1,10 @@
 {
-  "pluginAlias": "miot",
+  "pluginAlias": "mi-devices",
   "pluginType": "platform",
   "singular": true,
   "customUi": true,
   "headerDisplay": "Homebridge plugin for devices using the miot protocol",
-  "footerDisplay": "For a detailed description, see the [README](https://github.com/merdok/homebridge-miot#platform-configuration-fields)",
+  "footerDisplay": "For a detailed description, see the [README](https://github.com/claudiomadureira/homebridge-mi-devices#platform-configuration-fields)",
   "schema": {
     "type": "object",
     "properties": {
