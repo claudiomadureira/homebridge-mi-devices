@@ -1,5 +1,5 @@
 {
-  "pluginAlias": "mi-devices",
+  "pluginAlias": "homebridge-mi",
   "pluginType": "platform",
   "singular": true,
   "customUi": true,
