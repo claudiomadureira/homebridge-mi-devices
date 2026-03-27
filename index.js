@@ -8,7 +8,7 @@ const Events = require('./lib/constants/Events.js');
 
 let Service, Characteristic, Homebridge, Accessory;
 
-const PLUGIN_NAME = 'homebridge-mi-devices';
+const PLUGIN_NAME = 'homebridge-mi';
 const PLATFORM_NAME = 'miot';
 const PLUGIN_VERSION = '1.8.8';
 
